@@ -55,7 +55,26 @@ El modelo logró explicar una parte significativa de la variabilidad en las vent
 
 ## 📝 Conclusiones
 
-El análisis confirma que las puntuaciones de críticos y usuarios, junto con características del juego, pueden ayudar a predecir su éxito comercial. Sin embargo, se sugiere explorar mejoras como ajuste de hiperparámetros, uso de modelos avanzados (XGBoost, LightGBM), o incorporar variables externas (marketing, franquicias).
+Este proyecto permitió aplicar todo el flujo de trabajo típico en un problema real de ciencia de datos: desde la limpieza del dataset hasta el entrenamiento y validación de un modelo predictivo. Se utilizó un modelo de regresión basado en Random Forest para estimar las ventas globales de videojuegos a partir de variables numéricas y categóricas procesadas.
+
+Las variables más influyentes seleccionadas por `SelectKBest` fueron:
+- Puntuación de críticos (`Critic_Score`)
+- Puntuación de usuarios (`User_Score`)
+- Género (`Genre`)
+- Plataforma (`Platform`)
+- Año de lanzamiento (`Year_of_Release`)
+
+Estos resultados no solo coinciden con la intuición (es razonable pensar que las buenas críticas y los géneros populares impactan en las ventas), sino que también nos permiten validar, con datos, que existen patrones aprovechables para estimar el rendimiento comercial de un juego.
+
+El modelo logró capturar una parte significativa de la variabilidad, aunque no toda. Esto se refleja en un **R²** aceptable, pero no perfecto. Esto tiene sentido, ya que las ventas de un videojuego dependen de muchos factores no incluidos en el dataset, como:
+- Publicidad y marketing
+- Popularidad de la franquicia o personajes
+- Fechas de lanzamiento (competencia, época del año)
+- Exclusividad en plataformas
+- Reputación del estudio desarrollador
+
+A pesar de estas limitaciones, el modelo mostró un buen desempeño general, siendo fácil de implementar, rápido de entrenar y explicable. Esto lo convierte en un punto de partida útil para estudios de mercado en la industria del gaming.
+En resumen, este trabajo no solo cumple con los objetivos de implementación técnica, sino que también ofrece una mirada concreta sobre el potencial del análisis de datos en una industria tan dinámica como la de los videojuegos.
 
 ---
 
