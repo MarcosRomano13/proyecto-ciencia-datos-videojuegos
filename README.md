@@ -84,3 +84,25 @@ En resumen, este trabajo no solo cumple con los objetivos de implementación té
 - `Dataset_final.csv`: Dataset limpio utilizado para el análisis
 
 ---
+## 📌 Interpretación de las métricas del modelo
+
+El modelo fue evaluado utilizando dos métricas comunes en regresión:
+
+### 📉 Error Cuadrático Medio (MSE): 5.89
+
+El MSE mide cuánto se equivoca el modelo al predecir las ventas globales. Cuanto más bajo, mejor. En este caso, 5.89 implica que las predicciones del modelo tienen un error promedio notable, especialmente si consideramos que la mayoría de los videojuegos venden entre 0 y 5 millones de unidades.
+
+### 📊 Coeficiente de determinación (R²): 0.04
+
+Esta métrica indica que el modelo explica solo el **4% de la variabilidad** en las ventas. Es decir, el 96% de la variación sigue sin ser explicada por las variables actuales. Esto sugiere que:
+
+- Las variables incluidas (puntuaciones, género, plataforma, año) **no son suficientes** para capturar los factores que impulsan las ventas.
+- Existen **otros elementos clave** fuera del alcance del dataset, como marketing, popularidad de la franquicia, estacionalidad, etc.
+- La distribución sesgada y con outliers del target también dificulta una predicción precisa.
+
+### 🧠 Conclusión
+
+Aunque el modelo técnicamente funciona, sus resultados muestran que **las ventas globales son difíciles de predecir con las variables actuales**. Aun así, este análisis es valioso como punto de partida, ya que pone en evidencia los límites del dataset y abre la puerta a nuevas hipótesis.
+
+Próximos pasos pueden incluir la incorporación de nuevas fuentes de datos, transformaciones de variables y el uso de modelos más complejos o especializados.
+
